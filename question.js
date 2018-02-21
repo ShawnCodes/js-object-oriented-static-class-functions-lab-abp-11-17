@@ -4,13 +4,16 @@ class Question{
     this.content = content
     this.save()
   }
-  
+
   save(){
     this.constructor._All.push(this)
   }
-  
+
   static All() {
     return this._All
+  }
+  static Find() {
+    this.All()[id - 1]
   }
 }
 
